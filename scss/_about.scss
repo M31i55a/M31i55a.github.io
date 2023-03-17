@@ -1,0 +1,356 @@
+#about {
+  width: 100%;
+  height: 110vh;
+  color: $secondary-color;
+  position: relative;
+}
+#canvas {
+  position: absolute;
+  background: black;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.about-container {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+
+  .title-section {
+    text-align: center;
+    padding-top: 4%;
+  }
+}
+
+.about__body {
+  padding-left: 4%;
+  padding-right: 4%;
+  @include flex-center(row, center, space-between);
+  height: 70%;
+  text-align: center;
+
+  &__description {
+    background: rgba($primary-color, 0.25);
+    border-radius: 15px;
+    width: 30%;
+    padding: 1%;
+    position: relative;
+    border-top: 1px solid rgba(255, 255, 255, 0.4);
+    border-right: 1px solid rgba(255, 255, 255, 0.4);
+    z-index: 1;
+    line-height: 25px;
+    color: white;
+    overflow: hidden;
+    transition: 0.5s;
+    backdrop-filter: blur(3px);
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 50%;
+      height: 100%;
+      background: linear-gradient(
+        to left,
+        rgba(255, 255, 255, 0.1),
+        transparent
+      );
+      transform: skewX(30deg) translateX(0);
+      transition: 0.5s;
+    }
+
+    &:hover::before {
+      transform: skewX(25deg) translateX(140%);
+    }
+
+    .section1 {
+      padding: 8% 0;
+    }
+
+    .section2 {
+      padding: 8% 0;
+    }
+
+    .hobby {
+      padding: 8% 0;
+    }
+  }
+}
+
+.images-list-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 110vh;
+  transform: translateY(100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all ease-in-out 0.7s;
+
+  .back {
+    position: absolute;
+    top: 15%;
+    right: 5%;
+    background: $primary-color;
+    padding: 1.2%;
+    cursor: pointer;
+    animation: change 2s ease-in-out infinite;
+    transition: all ease 1s;
+
+    &:hover {
+      background: $secondary-color;
+    }
+  }
+
+  @keyframes change {
+    0% {
+      color: $secondary-color;
+    }
+    100% {
+      color: white;
+    }
+  }
+
+  .images-list {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(black, 0.1);
+
+    .cover {
+      position: relative;
+      width: 100%;
+      height: 55%;
+
+      &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 50;
+        height: 105%;
+        width: 150px;
+        background-image: linear-gradient(90deg, black, transparent);
+      }
+      &::after {
+        content: '';
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: 50;
+        height: 105%;
+        width: 150px;
+        background-image: linear-gradient(-90deg, black, transparent);
+      }
+
+      .scroll-images {
+        width: 100%;
+        height: 500px;
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        overflow: auto;
+        position: relative;
+        scroll-behavior: smooth;
+        background: black;
+
+        &::-webkit-scrollbar {
+          height: 0.7rem;
+          background: $text-color;
+        }
+
+        .child {
+          min-width: 400px;
+          height: 500px;
+          margin: 1px 10px;
+          cursor: pointer;
+          overflow: hidden;
+
+          &:nth-child(3) {
+            height: 300px;
+            min-width: 350px;
+          }
+
+          .child-img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* 3D cube */
+.wrap {
+  perspective: 1000px;
+  perspective-origin: 50% 50%;
+  margin-left: -67%;
+}
+.cube {
+  transform-style: preserve-3d;
+  width: 200px;
+  height: 200px;
+  position: relative;
+}
+.cube img {
+  position: absolute;
+  opacity: 0.9;
+  height: 200px;
+  width: 200px;
+  border: 0.5px solid white;
+  background: rgba($primary-color, 0.85);
+  transition: all ease-in-out 1s;
+}
+.cube img:nth-child(1) {
+  transform: rotateY(0deg) translateZ(100px);
+}
+.cube img:nth-child(2) {
+  transform: rotateY(90deg) translateZ(100px);
+}
+.cube img:nth-child(3) {
+  transform: rotateY(180deg) translateZ(100px);
+}
+.cube img:nth-child(4) {
+  transform: rotateY(-90deg) translateZ(100px);
+}
+.cube img:nth-child(5) {
+  transform: rotateX(90deg) translateZ(100px);
+}
+.cube img:nth-child(6) {
+  transform: rotateX(-90deg) translateZ(100px);
+}
+@keyframes loop {
+  from {
+    transform: rotateX(0deg) rotateY(0deg);
+  }
+  to {
+    transform: rotateX(360deg) rotateY(360deg);
+  }
+}
+.cube {
+  transform: rotateX(30deg) rotateY(25deg) rotateZ(10deg);
+}
+.cube:hover {
+  animation: loop 10s linear infinite;
+
+  & img {
+    border: 3px solid $secondary-color;
+    cursor: pointer;
+  }
+}
+
+.about__body__images {
+  position: relative;
+  p {
+    position: absolute;
+    bottom: -70%;
+    right: 35%;
+    width: 100%;
+    color: white;
+  }
+}
+
+@media (max-width: 920px) {
+  /* 3D cube */
+  .cube {
+    transform-style: preserve-3d;
+    width: 150px;
+    height: 150px;
+    position: relative;
+  }
+  .cube img {
+    position: absolute;
+    opacity: 0.8;
+    height: 150px;
+    width: 150px;
+    border: 0.5px solid white;
+    background: rgba($primary-color, 0.85);
+    transition: all ease-in-out 1s;
+  }
+  @keyframes loop {
+    from {
+      transform: rotateX(0deg) rotateY(0deg);
+    }
+    to {
+      transform: rotateX(360deg) rotateY(360deg);
+    }
+  }
+  .cube {
+    transform: rotateX(30deg) rotateY(25deg) rotateZ(10deg);
+    animation: loop 10s linear infinite;
+  }
+
+  .about__body__images {
+    position: relative;
+    p {
+      font-size: 0.75rem;
+      position: absolute;
+      bottom: -150%;
+      right: 35%;
+      width: 100%;
+      color: white;
+    }
+  }
+
+  .about__body {
+    padding-left: 2%;
+    padding-right: 2%;
+    height: 60%;
+    text-align: center;
+    p {
+      font-size: 0.7rem;
+    }
+
+    &__description {
+      border-radius: 10px;
+      min-width: 25%;
+      padding: 0.5%;
+      line-height: 25px;
+      color: white;
+      overflow: hidden;
+      transition: 0.5s;
+      backdrop-filter: blur(3px);
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 50%;
+        height: 100%;
+        background: linear-gradient(
+          to left,
+          rgba(255, 255, 255, 0.1),
+          transparent
+        );
+        transform: skewX(30deg) translateX(0);
+        transition: 0.5s;
+      }
+
+      &:hover::before {
+        transform: skewX(25deg) translateX(140%);
+      }
+
+      .section1 {
+        padding: 8% 0;
+      }
+
+      .section2 {
+        padding: 8% 0;
+      }
+
+      .hobby {
+        padding: 8% 0;
+      }
+    }
+  }
+}

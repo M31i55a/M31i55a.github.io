@@ -1,0 +1,80 @@
+@import 'config';
+@import 'home';
+@import 'welcome';
+@import 'about';
+@import 'skills';
+@import 'projects';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $primary-font-family;
+}
+body {
+  background: $text-color;
+}
+
+::-webkit-scrollbar {
+  width: 0.7em;
+}
+::-webkit-scrollbar-track {
+  background: rgba($primary-color, 0.1);
+  border-radius: 100vw;
+  margin-block: 0.2em;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to top, $primary-color, $secondary-color);
+  border-radius: 100vw;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: $secondary-color;
+}
+
+#canvas_eyes {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
+
+.contact-section {
+  position: fixed;
+  bottom: 4%;
+  z-index: 100;
+  background: $secondary-color;
+  border-radius: 5px;
+
+  .icon {
+    padding: 3px;
+    margin-top: 25%;
+    margin-bottom: 25%;
+    transition: all ease-in-out 0.5s;
+
+    a {
+      text-decoration: none;
+      color: black;
+    }
+
+    i {
+      display: flex;
+      justify-content: center;
+    }
+
+    &:hover {
+      border-radius: 50%;
+      background: white;
+      cursor: pointer;
+    }
+  }
+}
+
+#footer {
+  // z-index: 1000;
+  // text-align: center;
+  // position: absolute;
+  // color: $secondary-color;
+  display: none;
+}

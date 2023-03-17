@@ -1,0 +1,69 @@
+.welcome-screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 3rem;
+  width: 100%;
+  height: 100vh;
+  background: black;
+  color: white;
+  z-index: 100;
+  position: fixed;
+  transition: all ease-in-out 1s;
+}
+.welcome-screen h1 {
+  font-weight: 100;
+  margin: 0.4rem;
+  text-align: center;
+  font-size: 3rem;
+
+  animation: fadeInAnimation ease 3s;
+
+  @keyframes fadeInAnimation {
+    0% {
+      opacity: 0;
+      transform: translateY(-70px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  span {
+    color: $secondary-color;
+  }
+}
+
+.txt-type > .txt {
+  border-right: 1px solid white;
+  animation: blink 700ms ease infinite;
+}
+@keyframes blink {
+  to {
+    border-color: transparent;
+  }
+}
+
+.arrow {
+  position: absolute;
+  bottom: 4%;
+  right: 4%;
+  animation: change-color 2s ease infinite;
+  padding: 1%;
+  transition: all ease-in-out 0.5s;
+
+  &:hover {
+    background: $primary-color;
+    color: black;
+    cursor: pointer;
+  }
+}
+@keyframes change-color {
+  0% {
+    color: $secondary-color;
+  }
+  100% {
+    color: white;
+  }
+}

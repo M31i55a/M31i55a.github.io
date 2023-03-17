@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/main.css" />
+    <title>My Portofolio</title>
+    <link rel="shortcut icon" type="image/png" href="images/2path54621.png" />
+    <script
+      src="https://kit.fontawesome.com/a143695040.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!--welcome page -->
+    <div class="welcome-screen">
+      <canvas id="canvas_eyes"></canvas>
+      <h1>
+        Welcome to my
+        <span
+          class="txt-type"
+          data-wait="3000"
+          data-words='["Portofolio", "Website."]'
+        ></span>
+      </h1>
+
+      <div class="arrow">Click here!</div>
+    </div>
+
+    <!--home-->
+    <div id="home" class="home">
+      <canvas id="sun_canvas"></canvas>
+
+      <div class="header">
+        <div class="lang">
+          <div class="lang-list">
+            <div class="lang-list__title">
+              Choose a language
+            </div>
+            <ul class="lang-list__languages">
+              <li class="en">English</li>
+              <li class="fr">Français</li>
+              <!-- <li class="jp">Nihongo</li> -->
+            </ul>
+          </div>
+        </div>
+        <div class="nav">
+          <input type="checkbox" class="nav__toggle" id="nav__toggle" />
+          <ul class="nav__list">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <!-- <li><a href="#contact">Contact</a></li> -->
+          </ul>
+        </div>
+        <label for="nav__toggle" class="nav__toggle__label">
+          <span class="nav__toggle__label__span"></span>
+        </label>
+      </div>
+      <div class="main">
+        <h1 class="greet">
+          <div class="hi">Hiii, I'm</div>
+          <div class="names">
+            <div class="name">M. Gioda</div>
+            <div class="name0">
+              <!-- <canvas id="text_canvas"></canvas> -->
+            </div>
+          </div>
+        </h1>
+        <h2 class="description reveal">
+          A Freelance Front-end Web Developer
+        </h2>
+      </div>
+      <div class="contact-section">
+        <div class="icon"><i class="fa-brands fa-twitter"></i></div>
+        <div class="icon"><i class="fa-brands fa-square-whatsapp"></i></div>
+        <div class="icon"><i class="fa-brands fa-linkedin"></i></div>
+        <div class="icon"><a href="tel:+237673378657"><i class="fa-sharp fa-solid fa-square-phone"></i></a></i></div>
+      </div>
+    </div>
+
+    <!-- About -->
+    <div id="about">
+      <canvas id="canvas"></canvas>
+      <div class="about-container reveal">
+        <div class="title-section">
+          <h1>
+            Welcome In My Universe
+          </h1>
+        </div>
+        <div class="about__body">
+          <div class="about__body__description">
+            <div class="section1">
+              <p>
+                I'm studying mathematics and computer science in university.
+                I've been studying web development for 3 years now.
+              </p>
+            </div>
+            <div class="section2">
+              <p>
+                I can speak English, French and conversationnal Japanese.
+              </p>
+            </div>
+            <p class="hobby">
+              My hobby is Drawing
+            </p>
+          </div>
+          <div class="about__body__images">
+            <div class="wrap">
+              <div class="cube">
+                <img src="./images/fox.png" alt="" />
+                <img src="./images/ManAndLaptop.png" alt="" />
+                <img src="./images/2path54621.png" alt="" />
+                <img src="./images/anime.png" alt="" />
+                <img src="./images/Girl.png" alt="" />
+                <img src="./images/beautifulBlackGirl.png" alt="" />
+              </div>
+            </div>
+            <p>Click the cube to see my digital art work</p>
+          </div>
+
+          <div class="images-list-container">
+            <div class="back"><p>Back</p></div>
+            <div class="images-list">
+              <div></div>
+              <div class="cover">
+                <div class="scroll-images">
+                  <div class="child">
+                    <img class="child-img" src="./images/fox0.png" alt="" />
+                  </div>
+                  <div class="child">
+                    <img
+                      class="child-img"
+                      src="./images/ManAndLaptop0.png"
+                      alt=""
+                    />
+                  </div>
+                  <div class="child">
+                    <img
+                      class="child-img"
+                      src="./images/2path54621.png"
+                      alt=""
+                    />
+                  </div>
+                  <div class="child">
+                    <img class="child-img" src="./images/anime0.png" alt="" />
+                  </div>
+                  <div class="child">
+                    <img class="child-img" src="./images/Girl0.png" alt="" />
+                  </div>
+                  <div class="child">
+                    <img
+                      class="child-img"
+                      src="./images/beautifulBlackGirl0.png"
+                      alt=""
+                    />
+                  </div>
+                </div>
+              </div>
+              <div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- skills -->
+    <div id="skills">
+      <canvas id="skills_canvas"></canvas>
+      <div class="skills__title reveal">
+        <h1>My Skills</h1>
+      </div>
+      <div class="skills__body reveal">
+        <div class="skills__body__section1">
+          <div class="image__block">
+            <div class="image__container">
+              <div class="skills__container">
+                <div class="images_tech">
+                  <div class="image">
+                    <img src="images/OIP (12).jpg" alt="" />
+                    <p class="jquery">JQuery</p>
+                  </div>
+                  <div class="image">
+                    <img src="images/OIP (1).jpg" alt="" />
+                    <p class="sass">Sass</p>
+                  </div>
+                  <div class="image">
+                    <img src="images/OIP (6).jpg" alt="" />
+                    <p class="react">React</p>
+                  </div>
+                  <div class="image">
+                    <img src="images/OIP.jpg" alt="" />
+                    <p class="vanilla JS">Vanilla JS</p>
+                  </div>
+                </div>
+              </div>
+              <img src="./images/smart-watch.png" alt="" />
+            </div>
+          </div>
+        </div>
+        <div class="skills__body__section2">
+          <p>
+            I'm also into new technologies, frameworks and many Front-end
+            libraries
+          </p>
+        </div>
+      </div>
+
+      <div id="cursor"></div>
+    </div>
+
+    <!-- Projects -->
+    <div id="projects">
+      <canvas id="bubble_canvas"></canvas>
+      <div class="projects">
+        <div class="projects__title reveal">
+          <h1>Let's Dive Into My Projects</h1>
+        </div>
+        <div class="projects__body reveal">
+          <div class="projects__body__section1">
+            <p>
+              I'm working on some personnal projects.
+              <br />
+              I'll add them on my Github when they'll be ready.
+              <br />
+              <br />
+              <br />
+              For this Website, i used : HTML, Sass, Vanilla Javascript and
+              Inkscape(for the drawings)
+              <br />
+              <br />
+              <br />
+              Thanks for your visit
+            </p>
+          </div>
+          <!-- <div class="projects__body__section2">
+            <p>Projects Book</p>
+          </div> -->
+        </div>
+      </div>
+    </div>
+
+    <div id="footer">
+      <div class="copyright-section">
+        <p>&copy; Copyright 2022. All rights reserved</p>
+      </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/galaxy_bg.js"></script>
+    <script src="js/bubble_canvas.js"></script>
+    <script src="js/colored_snow.js"></script>
+    <script src="js/sun_effect.js"></script>
+    <script src="js/text_effect.js"></script>
+  </body>
+</html>
