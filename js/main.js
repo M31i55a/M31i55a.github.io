@@ -43,6 +43,14 @@ const toggleHome = () => {
 
 clickHere.addEventListener('click', toggleHome)
 
+//Glassmorphism
+VanillaTilt.init(document.querySelectorAll('.about__body__description'), {
+  max: 25,
+  speed: 400,
+  glare: true,
+  'max-glare': 1,
+})
+
 //manage languages
 const chosen = false;
 
